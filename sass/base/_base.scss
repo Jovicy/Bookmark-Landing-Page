@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $default-font-family;
+    background-color: $color-white;
+    font-size: $default-font-size;
+    color: $default-color;
+}
+
+.container {
+    @include respond(phone) {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    @include respond(tab-land) {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    @include respond(tab-port) {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+}
+
+li, a {
+    font-weight: $font-style-normal;
+    font-size: $default-font-size;
+    text-decoration: none;
+    list-style: none;
+}

@@ -1,0 +1,89 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__center {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        @include respond(tab-land) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    &__briefing {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+
+        @include respond(tab-land) {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            text-align: left;
+        }
+    }
+
+    &__briefing h1 {
+        color: $default-heading-color;
+        font-weight: $font-weight-m;
+        font-size: $hero-paragraph;
+
+
+        @include respond(tab-land) {
+            color: $default-heading-color;
+            font-weight: $font-weight-m;
+            font-size: $mid-font;
+        }
+    }
+
+    &__briefing p {
+        font-size: $default-sm-font;
+        font-weight: $font-style-normal;
+        line-height: 28px;
+        width: 300px;
+
+        @include respond(tab-land) {
+            font-size: $default-font-size;
+            width: auto;
+            font-weight: $font-style-normal;
+            line-height: 28px;
+        }
+    }
+
+    &__illustration img {
+        @include respond(phone) {
+            height: 220px;
+        }
+
+        @include respond(tab-port) {
+            height: 300px;
+        }
+
+        @include respond(tab-land) {
+            position: relative;
+            left: 50px;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+        padding-bottom: 150px;
+
+        @include respond(tab-land) {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            justify-content: left;
+        }
+    }
+
+}

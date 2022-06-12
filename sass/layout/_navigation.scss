@@ -1,0 +1,68 @@
+/*
+=============== 
+Navbar phone
+===============
+*/
+.nav {
+    &__center {
+
+        @include respond(tab-land) {
+            min-height: 15vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__header {
+        min-height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__toggle {
+        font-size: 1.5rem;
+        transition: all 0.3s linear;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            transform: rotate(90deg);
+        }
+
+        @include respond(tab-land) {
+            display: none;
+        }
+    }
+
+    &__links {
+        height: 0;
+        overflow: hidden;
+        transition: all 0.3s linear;
+
+        @include respond(tab-land) {
+            background: none;
+            height: auto;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__links li a {
+        color: $default-heading-color;
+        font-size: 1rem;
+        text-transform: capitalize;
+        display: block;
+        padding: 0.5rem 1rem;
+
+        &:hover {
+            color: $nav-hover;
+        }
+    }
+
+    &__logo {
+        cursor: pointer;
+    }
+}

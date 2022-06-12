@@ -1,0 +1,406 @@
+// features
+.feature {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    @include respond(tab-land) {
+        min-height: 20vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__center {
+        min-height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include respond(tab-land) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__briefing {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding-bottom: 25px;
+
+        @include respond(tab-land) {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            padding-bottom: 25px;
+        }
+
+        h2 {
+            color: $default-heading-color;
+            font-weight: $font-weight-m;
+            font-size: $hero-paragraph;
+            text-align: center;
+
+            @include respond(tab-land) {
+                font-size: $h2-paragraph;
+                color: $default-heading-color;
+                font-weight: $font-weight-m;
+            }
+        }
+
+        p {
+            font-size: $default-sm-font;
+            font-weight: $font-style-normal;
+            line-height: 28px;
+            text-align: center;
+
+            @include respond(tab-land) {
+                font-size: $default-font-size;
+                width: 550px;
+                font-weight: $font-style-normal;
+                line-height: 28px;
+            }
+        }
+    }
+
+    &__tab {
+        &__btns {
+            padding-bottom: 50px;
+
+            @include respond(tab-land) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 50px;
+            }
+        }
+
+        &__btn {
+            display: flex;
+            flex-direction: column;
+
+            @include respond(tab-land) {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+
+        &__extra {
+            border: none;
+
+            @include respond(tab-land) {
+                border-bottom: 2px solid $default-color;
+                border-radius: 6px;
+                width: 59.9%;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        padding-bottom: 120px;
+        display: none;
+
+        @include respond(tab-land) {
+            display: flex;
+            flex-direction: row;
+            gap: 100px;
+            align-items: center;
+            display: none;
+        }
+
+        &__img {
+            img {
+
+                // height: 200px;
+                // margin: 0 auto;
+                // display: flex;
+                @include respond(phone) {
+                    height: 200px;
+                }
+
+                @include respond(tab-port) {
+                    height: 200px;
+                }
+            }
+        }
+
+        &__briefing {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 15px;
+            padding: 30px;
+
+            @include respond(tab-land) {
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                gap: 20px;
+            }
+
+            h2 {
+                color: $default-heading-color;
+                font-weight: $font-weight-m;
+                font-size: $hero-paragraph;
+
+                @include respond(tab-land) {
+                    font-size: $h2-paragraph;
+                    color: $default-heading-color;
+                    font-weight: $font-weight-m;
+                }
+            }
+
+            p {
+                font-size: $default-sm-font;
+                font-weight: $font-style-normal;
+                line-height: 28px;
+
+                @include respond(tab-land) {
+                    font-size: $default-font-size;
+                    font-weight: $font-style-normal;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+}
+
+// Pricing
+.pricing {
+    &__center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 70px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__briefing {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+
+        @include respond(tab-land) {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        h2 {
+            color: $default-heading-color;
+            font-weight: $font-weight-m;
+            font-size: $hero-paragraph;
+            text-align: center;
+
+            @include respond(tab-land) {
+                font-size: $h2-paragraph;
+                color: $default-heading-color;
+                font-weight: $font-weight-m;
+            }
+        }
+
+        p {
+            font-size: $default-sm-font;
+            font-weight: $font-style-normal;
+            line-height: 28px;
+            text-align: center;
+
+            @include respond(tab-land) {
+                font-size: $default-font-size;
+                width: 550px;
+                font-weight: $font-style-normal;
+                line-height: 28px;
+            }
+        }
+    }
+
+    &__downloads {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-bottom: 50px;
+
+        @include respond(tab-land) {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+
+        &__category {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            background: $color-white;
+            box-shadow: 0px 10px 20px -1px rgba(140, 139, 144, 0.52);
+            padding: 20px 0px;
+            width: 100%;
+            border-radius: 5px;
+
+            &__text {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                h3 {
+                    font-size: '';
+                    color: $default-heading-color;
+                    font-weight: $font-weight-m;
+                }
+
+                p {
+                    font-size: $default-mid-font;
+                    font-weight: $font-style-normal;
+                }
+            }
+        }
+    }
+
+}
+
+// Contact
+.contact {
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+
+    &__briefing {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+
+        @include respond(tab-land) {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        h2 {
+            color: $default-heading-color;
+            font-weight: $font-weight-m;
+            font-size: $hero-paragraph;
+            text-align: center;
+
+            @include respond(tab-land) {
+                font-size: $h2-paragraph;
+                color: $default-heading-color;
+                font-weight: $font-weight-m;
+            }
+        }
+
+        p {
+            font-size: $default-sm-font;
+            font-weight: $font-style-normal;
+            line-height: 28px;
+            text-align: center;
+
+            @include respond(tab-land) {
+                font-size: $default-font-size;
+                width: 550px;
+                font-weight: $font-style-normal;
+                line-height: 28px;
+            }
+        }
+    }
+
+
+    &__faq {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        width: 100%;
+
+        @include respond(tab-land) {
+            width: 50%; 
+        }
+
+        &__questions {
+            border-top: 1px solid $default-color;
+            padding: 20px 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            &__title {
+                display: flex;
+                justify-content: space-between;
+                color: $default-heading-color;
+            }
+
+            &__btn {
+                color: $btn-color;
+                font-size: $default-font-size;
+                background: transparent;
+                border-color: transparent;
+                cursor: pointer;
+            }
+
+            &__text {
+                display: none;
+            }
+        }
+    }
+}
+
+// end of contact
+
+.active {
+    display: flex;
+    color: $default-heading-color;
+    justify-content: center;
+}
+
+.down {
+    position: relative;
+    top: 30px;
+}
+
+.downs {
+    position: relative;
+    top: 60px;
+}
+
+@media screen and (max-width: 1200px) {
+    .feature__tab__extra {
+        border: none;
+    }
+}
+
+// extra
+.show-links {
+    height: 10rem;
+}
+
+.show-text .question-text {
+    display: block;
+}
+
+.down-icon {
+    display: none;
+}
+
+.show-text .down-icon {
+    display: inline;
+}
+
+.show-text .up-icon {
+    display: none;
+}
