@@ -27,25 +27,13 @@ body {
   font-size: 18px;
   color: #8c8b90; }
 
-@media (max-width: 37.5em) {
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 10px; } }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; }
 
-@media (min-width: 56.25em) {
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px; } }
-
-@media (max-width: 75em) {
-  .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 30px; } }
-
-li, a {
+li,
+a {
   font-weight: normal;
   font-size: 18px;
   text-decoration: none;
@@ -91,7 +79,7 @@ li, a {
         border: 2px solid #f45d64;
         letter-spacing: 1px; } }
     .btn__nav:hover {
-      background: #fff;
+      background: transparent;
       color: #f45d64; }
   .btn__header__first {
     background: #5267da;
@@ -154,6 +142,72 @@ li, a {
     .btn__contact:hover {
       background: #fff;
       color: #5267da; }
+  .btn__login {
+    padding: 8px 25px;
+    background: #f45d64;
+    border: 2px solid #f45d64;
+    letter-spacing: 1px; }
+    @media (min-width: 56.25em) {
+      .btn__login {
+        padding: 8px 25px;
+        background: #f45d64;
+        border: 2px solid #f45d64;
+        letter-spacing: 1px; } }
+    .btn__login:hover {
+      background: #fff;
+      color: #f45d64; }
+
+.input {
+  border-radius: 4px;
+  border: none;
+  padding: 8px 25px;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  color: #272c40;
+  text-align: left; }
+
+.footer {
+  background-color: #272c40; }
+  .footer__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    gap: 35px; }
+    @media (min-width: 56.25em) {
+      .footer__center {
+        min-height: 20vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; } }
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center; }
+    @media (min-width: 56.25em) {
+      .footer__links {
+        display: flex;
+        flex-direction: row;
+        gap: 40px; } }
+    .footer__links li a {
+      color: #fff;
+      font-size: 18px; }
+      .footer__links li a:hover {
+        color: #f45d64; }
+    .footer__links__social {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      text-align: center; }
+      @media (min-width: 56.25em) {
+        .footer__links__social {
+          display: flex;
+          flex-direction: row;
+          gap: 40px; } }
 
 .header {
   display: flex;
@@ -404,77 +458,77 @@ Navbar phone
             font-weight: normal;
             line-height: 28px; } }
 
-.pricing__center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 70px;
-  justify-content: center;
-  text-align: center; }
-
-.pricing__briefing {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center; }
-  @media (min-width: 56.25em) {
-    .pricing__briefing {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: center; } }
-  .pricing__briefing h2 {
-    color: #272c40;
-    font-weight: 600;
-    font-size: 25px;
-    text-align: center; }
-    @media (min-width: 56.25em) {
-      .pricing__briefing h2 {
-        font-size: 30px;
-        color: #272c40;
-        font-weight: 600; } }
-  .pricing__briefing p {
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 28px;
-    text-align: center; }
-    @media (min-width: 56.25em) {
-      .pricing__briefing p {
-        font-size: 18px;
-        width: 550px;
-        font-weight: normal;
-        line-height: 28px; } }
-
-.pricing__downloads {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.pricing {
   padding-bottom: 50px; }
-  @media (min-width: 56.25em) {
-    .pricing__downloads {
-      display: flex;
-      flex-direction: row;
-      gap: 30px; } }
-  .pricing__downloads__category {
+  .pricing__center {
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    background: #fff;
-    box-shadow: 0px 10px 20px -1px rgba(140, 139, 144, 0.52);
-    padding: 20px 0px;
-    width: 100%;
-    border-radius: 5px; }
-    .pricing__downloads__category__text {
+    align-items: center;
+    gap: 70px;
+    justify-content: center;
+    text-align: center; }
+  .pricing__briefing {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center; }
+    @media (min-width: 56.25em) {
+      .pricing__briefing {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center; } }
+    .pricing__briefing h2 {
+      color: #272c40;
+      font-weight: 600;
+      font-size: 25px;
+      text-align: center; }
+      @media (min-width: 56.25em) {
+        .pricing__briefing h2 {
+          font-size: 30px;
+          color: #272c40;
+          font-weight: 600; } }
+    .pricing__briefing p {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 28px;
+      text-align: center; }
+      @media (min-width: 56.25em) {
+        .pricing__briefing p {
+          font-size: 18px;
+          width: 550px;
+          font-weight: normal;
+          line-height: 28px; } }
+  .pricing__downloads {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 50px; }
+    @media (min-width: 56.25em) {
+      .pricing__downloads {
+        display: flex;
+        flex-direction: row;
+        gap: 30px; } }
+    .pricing__downloads__category {
       display: flex;
       flex-direction: column;
-      gap: 10px; }
-      .pricing__downloads__category__text h3 {
-        font-size: '';
-        color: #272c40;
-        font-weight: 600; }
-      .pricing__downloads__category__text p {
-        font-size: 16px;
-        font-weight: normal; }
+      gap: 25px;
+      background: #fff;
+      box-shadow: 0px 10px 20px -1px rgba(140, 139, 144, 0.52);
+      padding: 20px 0px;
+      width: 100%;
+      border-radius: 5px; }
+      .pricing__downloads__category__text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; }
+        .pricing__downloads__category__text h3 {
+          font-size: '';
+          color: #272c40;
+          font-weight: 600; }
+        .pricing__downloads__category__text p {
+          font-size: 16px;
+          font-weight: normal; }
 
 .contact {
   height: 100vh;
@@ -534,6 +588,8 @@ Navbar phone
         display: flex;
         justify-content: space-between;
         color: #272c40; }
+        .contact__faq__questions__title:hover {
+          color: #f45d64; }
       .contact__faq__questions__btn {
         color: #5267da;
         font-size: 18px;
@@ -542,6 +598,55 @@ Navbar phone
         cursor: pointer; }
       .contact__faq__questions__text {
         display: none; }
+
+.login {
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  background-color: #5267da; }
+  .login__briefing {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; }
+    .login__briefing h2 {
+      font-weight: 600;
+      font-size: 25px;
+      text-align: center;
+      width: auto; }
+      @media (min-width: 56.25em) {
+        .login__briefing h2 {
+          font-size: 30px;
+          color: #fff;
+          font-weight: 600;
+          text-align: center;
+          width: 450px; } }
+    .login__briefing p {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 28px;
+      text-align: center; }
+      @media (min-width: 56.25em) {
+        .login__briefing p {
+          font-size: 18px;
+          font-weight: normal;
+          line-height: 28px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          text-align: center; } }
+  .login__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; }
+    @media (min-width: 56.25em) {
+      .login__form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px; } }
 
 .active {
   display: flex;
@@ -553,6 +658,7 @@ Navbar phone
   top: 30px; }
 
 .downs {
+  padding-bottom: 70px;
   position: relative;
   top: 60px; }
 
@@ -563,14 +669,15 @@ Navbar phone
 .show-links {
   height: 10rem; }
 
-.show-text .question-text {
+.show-text .contact__faq__questions__text {
   display: block; }
 
 .down-icon {
   display: none; }
 
 .show-text .down-icon {
-  display: inline; }
+  display: inline;
+  color: #f45d64; }
 
 .show-text .up-icon {
   display: none; }

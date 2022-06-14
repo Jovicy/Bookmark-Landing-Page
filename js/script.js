@@ -31,5 +31,20 @@ about.addEventListener('click', function(e){
 // end of tabs
 
 // FAQ
+const questions = document.querySelectorAll('.contact__faq__questions');
+
+questions.forEach(function(question){
+    const butn = question.querySelector('.contact__faq__questions__btn');
+    butn.addEventListener('click', function(){
+
+        questions.forEach(function(item){
+            if(item !== question){
+                item.classList.remove('show-text');
+            }
+        })
+        question.classList.toggle('show-text');
+    });
+});
+
 
 // end of FAQ

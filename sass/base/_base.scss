@@ -14,26 +14,13 @@ body {
 }
 
 .container {
-    @include respond(phone) {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 10px;
-    }
-
-    @include respond(tab-land) {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    @include respond(tab-port) {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 0 30px;
-    }
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-li, a {
+li,
+a {
     font-weight: $font-style-normal;
     font-size: $default-font-size;
     text-decoration: none;

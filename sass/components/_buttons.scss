@@ -19,7 +19,7 @@
         }
 
         &:hover {
-            background: $color-white;
+            background: transparent;
             color: $nav-hover;
         }
     }
@@ -111,6 +111,25 @@
         &:hover {
             background: $color-white;
             color: $btn-color;
+        }
+    }
+
+    &__login {
+        padding: 8px 25px;
+        background: $nav-hover;
+        border: 2px solid $nav-hover;
+        letter-spacing: 1px;
+
+        @include respond(tab-land) {
+            padding: 8px 25px;
+            background: $nav-hover;
+            border: 2px solid $nav-hover;
+            letter-spacing: 1px; 
+        }
+
+        &:hover {
+            background: $color-white;
+            color: $nav-hover;
         }
     }
 }

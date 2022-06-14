@@ -177,6 +177,8 @@
 
 // Pricing
 .pricing {
+    padding-bottom: 50px;
+
     &__center {
         display: flex;
         flex-direction: column;
@@ -343,6 +345,10 @@
                 display: flex;
                 justify-content: space-between;
                 color: $default-heading-color;
+
+                &:hover {
+                    color: $nav-hover;
+                }
             }
 
             &__btn {
@@ -360,7 +366,68 @@
     }
 }
 
-// end of contact
+// Login
+.login {
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    align-items: center;
+    text-align: center;
+    color: $color-white;
+    background-color: $btn-color;
+
+
+    &__briefing {
+        display: flex; 
+        flex-direction: column;
+        gap: 20px;
+
+        h2 {
+            font-weight: $font-weight-m;
+            font-size: $hero-paragraph;
+            text-align: center;
+            width: auto;
+
+            @include respond(tab-land) {
+                font-size: $h2-paragraph;
+                color: $color-white;
+                font-weight: $font-weight-m;
+                text-align: center;
+                width: 450px;
+            }
+        }
+
+        p {
+            font-size: $default-sm-font;
+            font-weight: $font-style-normal;
+            line-height: 28px;
+            text-align: center;
+
+            @include respond(tab-land) {
+                font-size: $default-font-size;
+                font-weight: $font-style-normal;
+                line-height: 28px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                text-align: center;
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        @include respond(tab-land) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+        }
+    }
+}
 
 .active {
     display: flex;
@@ -374,6 +441,7 @@
 }
 
 .downs {
+    padding-bottom: 70px;
     position: relative;
     top: 60px;
 }
@@ -389,7 +457,7 @@
     height: 10rem;
 }
 
-.show-text .question-text {
+.show-text .contact__faq__questions__text {
     display: block;
 }
 
@@ -399,6 +467,7 @@
 
 .show-text .down-icon {
     display: inline;
+    color: $nav-hover;
 }
 
 .show-text .up-icon {
