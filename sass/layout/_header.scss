@@ -4,6 +4,7 @@
     align-items: center;
 
     &__center {
+        padding: 60px 0px;
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
@@ -56,18 +57,16 @@
         }
     }
 
-    &__illustration img {
-        @include respond(phone) {
-            height: 220px;
-        }
-
-        @include respond(tab-port) {
-            height: 300px;
-        }
-
-        @include respond(tab-land) {
-            position: relative;
-            left: 50px;
+    &__illustration {
+        img {
+            @include respond(phone) {
+                height: 200px;
+            }
+    
+            @include respond(tab-land) {
+                position: relative;
+                left: 50px;
+            }
         }
     }
 
@@ -76,7 +75,6 @@
         flex-direction: row;
         gap: 10px;
         justify-content: center;
-        padding-bottom: 150px;
 
         @include respond(tab-land) {
             display: flex;

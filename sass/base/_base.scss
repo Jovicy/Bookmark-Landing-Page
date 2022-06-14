@@ -11,12 +11,23 @@ body {
     background-color: $color-white;
     font-size: $default-font-size;
     color: $default-color;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+html {
+    --scrollbarBG: #CFD8DC;
+    --thumbBG: #000;
+}
+
+body::-webkit-scrollbar {
+    width: 11px;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 li,

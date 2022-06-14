@@ -1,17 +1,11 @@
 // features
 .feature {
-    min-height: 100vh;
+    padding: 50px 0px;
     display: flex;
+    justify-content: center;
     align-items: center;
 
-    @include respond(tab-land) {
-        min-height: 20vh;
-        display: flex;
-        justify-content: center;
-    }
-
     &__center {
-        min-height: 70vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -107,7 +101,6 @@
         flex-direction: column;
         gap: 30px;
         align-items: center;
-        padding-bottom: 120px;
         display: none;
 
         @include respond(tab-land) {
@@ -125,11 +118,7 @@
                 // margin: 0 auto;
                 // display: flex;
                 @include respond(phone) {
-                    height: 200px;
-                }
-
-                @include respond(tab-port) {
-                    height: 200px;
+                    height: 180px;
                 }
             }
         }
@@ -177,7 +166,9 @@
 
 // Pricing
 .pricing {
-    padding-bottom: 50px;
+    padding: 60px 0px;
+    display: flex;
+    align-items: center;
 
     &__center {
         display: flex;
@@ -274,13 +265,13 @@
 
 // Contact
 .contact {
-    height: 100vh;
+    padding: 60px 0px;
     align-items: center;
     display: flex;
     flex-direction: column;
     gap: 50px;
     justify-content: center;
-    padding-bottom: 60px;
+    // padding-bottom: 60px;
 
     &__briefing {
         display: flex;
@@ -332,7 +323,7 @@
         width: 100%;
 
         @include respond(tab-land) {
-            width: 50%; 
+            width: 50%;
         }
 
         &__questions {
@@ -364,6 +355,10 @@
                 display: none;
             }
         }
+
+        &__btn {
+            padding-bottom: 100px;
+        }
     }
 }
 
@@ -379,7 +374,7 @@
 
 
     &__briefing {
-        display: flex; 
+        display: flex;
         flex-direction: column;
         gap: 20px;
 
