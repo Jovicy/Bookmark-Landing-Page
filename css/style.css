@@ -536,7 +536,8 @@ Navbar phone
   display: flex;
   flex-direction: column;
   gap: 50px;
-  justify-content: center; }
+  justify-content: center;
+  padding-bottom: 60px; }
   .contact__briefing {
     display: flex;
     flex-direction: column;
